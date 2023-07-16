@@ -14,6 +14,7 @@ public class PocetLitru {
         int objem = scanner.nextInt();
 
         System.out.println(vypoctiObjem(pocet, objem));
+        scanner.close();
     
     }
 

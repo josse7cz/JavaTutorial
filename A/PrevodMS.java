@@ -13,7 +13,7 @@ public class PrevodMS {
                 
         PrevodMS pms=new PrevodMS();       
         System.out.println("Rychlost byla: "+pms.prevodNaKmH(ms)+ " km/h.");
-        
+        scanner.close();
         
     }
     public float prevodNaKmH(float ms){

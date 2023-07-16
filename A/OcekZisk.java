@@ -13,6 +13,7 @@ public class OcekZisk {
         String formatovanyVysledek = String.format("%.2f", vysledek);
 
         System.out.print ("Výsledek je: "+formatovanyVysledek+"%.");
+        scanner.close();
       
     }
     

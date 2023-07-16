@@ -6,9 +6,8 @@ public class DruhaMocninaCisla {
         System.out.println("Zadejte číslo, které chcete převést na druhou");
         double n= sc.nextDouble();
         System.out.println(druha.vratMocninu(n));
-        
-        
-        
+        sc.close();
+             
     }
     
     public double vratMocninu(double mocnenec){

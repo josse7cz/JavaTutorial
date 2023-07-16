@@ -14,6 +14,7 @@ public class VypocetZhodnoceni {
         int doba = scanner.nextInt();
 
         double konecnaCastka = vypocetKonecneCastky(castka, urok, doba);
+        scanner.close();
 
         System.out.println("Po uplynutí " + doba + " dní bude v bance " + konecnaCastka + " Kč.");
     }

@@ -12,6 +12,7 @@ public class VypocetKruhu {
 
         System.out.println("Plocha kruhu je: " + plocha);
         System.out.println("Obvod kruhu je: " + obvod);
+        scanner.close();
     }
 
     public static double vypocetPlochy(double prumer) {

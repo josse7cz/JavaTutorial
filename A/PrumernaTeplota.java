@@ -18,7 +18,7 @@ public class PrumernaTeplota {
         
         PrumernaTeplota pt=new PrumernaTeplota();        
         System.out.println("Průměrná denní teplota byla: "+pt.vypoctiPrumernouTeplotu(rano, poledne, vecer)+ " \u00B0C.");
-        
+        scanner.close();
     }
 
 public float vypoctiPrumernouTeplotu(float rano, float poledne, float vecer){

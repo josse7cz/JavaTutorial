@@ -5,16 +5,18 @@ class PocetDnuAHodin{
     int hodin;
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in, "Windows-1250");
-        System.out.println("Ahoj, jsem Program, který převede počet dnů a hodin na hodiny!");
-        System.out.println("Napiš počet dnů: ");
-        
-        int dny = scanner.nextInt();
-        System.out.println("Napiš počet hodin: ");
-        
-        int hodiny=scanner.nextInt();
-        PocetDnuAHodin pocet=new PocetDnuAHodin();        
-        System.out.println("Výsledek je: "+pocet.pocetHodin(dny,hodiny)+ " hodin.");
+        try (Scanner scanner = new Scanner(System.in, "Windows-1250")) {
+            System.out.println("Ahoj, jsem Program, který převede počet dnů a hodin na hodiny!");
+            System.out.println("Napiš počet dnů: ");
+            
+            int dny = scanner.nextInt();
+            System.out.println("Napiš počet hodin: ");
+            
+            int hodiny=scanner.nextInt();
+            PocetDnuAHodin pocet=new PocetDnuAHodin();        
+            System.out.println("Výsledek je: "+pocet.pocetHodin(dny,hodiny)+ " hodin.");
+            scanner.close();
+        }
         
     }
     public int pocetHodin(int dnu, int hodin){
