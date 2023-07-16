@@ -1,0 +1,308 @@
+Zadání šedým písmem jsou totožná s původním BasicCv.docx
+Tato zkouška se koná pod Visual Studiem, tedy ne po Excelem
+Nainstalujte si MS Visual Studio Community 2017 a to jak Visual Basic tak i C#. Instalaci si stáhněte ze  stránek Microsoftu nebo si od nás stáhněte obsah adresáře:  I:\VS2015Community
+
+- měli byste umět krokovat (ladit) kód (Debug – Step Into)
+- všechny programy s DO - LOOP WHILE předělejte na DO WHILE – LOOP a opačně a to i za cenu, že se to bude jevit neefektivní (toto byste měli zvládat rutinně)
+- v cyklech DO bývá obvykle inkrementace na konci cyklu, předělat na inkrementaci na začátku cyklu. Tedy např. následující cykly dělají funkčně naprosto totéž:
+ i = 0 i = -1 DO DO … příkazy … i = i + 1 i = i + 1 … příkazy … LOOP WHILE i < 10 LOOP WHILE i < 9
+- funkci byste měli umět předat pole a opět byste měli umět pole vrátit jako výsledek funkce (pole na vstupu a výstupu)
+- funkci byste měli být schopni předělat na subrutinu
+- u subrutin musí být jasné předávání parametrů odkazem (ve VB to je ByRef). A ověřit si, zda je to nutné, pokud je výstupním parametrem pole
+
+Po vypracování úloh si vyžádejte řešení. Na rozdíl od programů podle souboru BasicCv neposílám již řešení po jednotlivých sekcích, ale až celé nakonec. A řešení v C# neposílám vůbec, protože pokud jste použili stejný algoritmus jako ve VB (včetně např. stejných názvů proměnných či funkcí atd.) a program chodí, tak je asi dobře.
+Přečtěte si ve vytisknutých skriptech kapitolu Založení projektu ve Visual Studiu. Struktura: všechny programy podle tohoto souboru by měly být v jednom solution. v něm projekty A, B...F až F2. A v projektech jednotlivé moduly (s příponou VB). V C# to budou třídy s příponou CS. 
+
+Pokud si nebudete vědět s něčím rady a budete chtít poslat svůj program na posouzení, pak neposílejte strukturu složek celého solution. I když bude sbalené do jednoho komprimovaného souboru, tak poštovní server pozná, že obsahuje soubory se zakázanými příponami (.EXE, .VB atd.). Pošlete jen text konkrétního programu. A to buď vložením obsahu souboru do těla mailu. Nebo posláním příslušného souboru .VB jako přílohy. Ale v tom případě přejmenujte příponu .VB např. na .TXT, jinak příloha neprojde. Naopak příponu CS u programů v C# přejmenovávat nemusíte.
+a) Nejjednodušší úlohy (bez větvení)
+1) Zadejte počet dnů a hodin. Program vypočte, kolik je to hodin (výsledek může být reálné číslo)
+2) Program zrušen
+3) Zadejte teplotu v 6,12 a 18 hodin. Vytiskne se průměrná denní teplota.
+4) Zadejte rychlost v m/s a převeďte na km/hod.
+5) Zadejte částku peněz, které jsou uloženy v bance, úrok a délku uložení. Vypočítejte, kolik bude v bance po uplynutí uvedené doby. Nepočítejte úroky z úroků. 
+6) Zadejte poloměr kruhu. Vypočítejte obvod (o=2pr) a plochu (P=pr2).
+7) Zadejte počet sudů a množství litrů v sudu (ve všech je stejně). Kolik litrů je celkem?
+8) Zadejte číslo, počítač vypíše: Druhá mocnina čísla…  je...
+9) Z  klávesnice se  zadá očekávaný a  skutečný zisk. Počítač oznámí, kolika procent bylo dosaženo.
+10) Převeďte úhel zadaný v radiánech na stupně.
+Náročnější
+11) Sestavte program, který se zeptá na délku běžecké trati v metrech a poté na čas běžce na této trati ve vteřinách. Poté zobrazí, jakou průměrnou rychlostí v [km/hod] běžec běžel. (program Doc. Homoly)¨
+12) Sestavte program, který se zeptá na průměr vašeho kruhového bazénu a poté na jeho výšku (obojí v metrech). Poté zobrazí, kolik tun vody se do něj vejde (1 m3 vody = 1 tuna). (program Doc. Homoly)
+13) Zadejte délku odvěsen pravoúhlého trojúhelníka. Program pomocí Pythagorovy věty vypočte délku přepony. Pro kontrolu: zadáte-li odvěsny o délce 3 a 4, pak výsledek je 5 (přesněji 5,0, protože výsledek odmocniny se musí ukládat do desetinného typu )
+
+
+b) Podmíněné příkazy
+Nejprve upravte program b12 z BasicCv.doc tak, aby program fungoval správně, ať už bude uživatel zadávat A či a (případně N nebo n).
+1)  Určete, zda dvě zadaná čísla x,y čísla splňují nerovnost x+3<5y-1
+2)  Zadejte dvě čísla x a y. Zjistěte, zda číslo x je dělitelné číslem y.
+3)  Pro danou dvojici čísel x,y spočítejte hodnotu výrazu 1/(x.y). Pokud by byl jmenovatel nulový, tak nepočítá, ale vypíše varovné hlášení. 
+4)  Zadejte tři čísla, počítač zjistí, které je největší a které nejmenší.
+5)  Sestavte program, který postupně načte jméno a výšku prvního žáka, a jméno a výšku druhého žáka. Poté zobrazí jméno vyššího z nich. 
+6)  První auto ujelo trasu S1 za čas T1 a druhé trasu S2 za čas T2. (údaje zadejte). Spočítejte průměrnou rychlost obou aut a vypište zprávu "... auto je o ... rychlejší".
+7)  Uživatel zadá letopočet (od roku 1600). Program vrátí název státního útvaru, ve kterém jsme se tehdy nacházeli (Rakousko, Rakousko-Uhersko, Československá republika, Protektorát Böhmen und Mähren atd.). Řešte pomocí else if.
+8)  Uživatel zadá znak, program odpoví, zda se jedná o písmeno, číslici nebo jiný znak. Řešte pomocí else if.
+9)  Zadejte dvě čísla, počítač napíše "První číslo je větší (nebo menší)"
+10) Zadejte číslo. Počítač vypíše: "Odmocnina čísla ... je  ..." nebo oznámí, že odmocninu záporného čísla počítat nebude.
+11) Zadejte dvě kladná  čísla, která představují délky  stran obdélníka. Zjistěte, zda se jedná o čtverec a vytiskněte zprávu ve tvaru: "Čtverec má dálku strany..." nebo "Obdélník má rozměry ... x ..."
+12) Program se zeptá, zda je den a zda je horko (odpověď a/n). Pouze v případě obou odpovědí kladných vám navrhne jít si zaplavat. Použijte jen jeden příkaz IF (ale se složenou podmínkou). Na rozdíl od obdobného příkladu v BasicCv.doc uvažujte tentokrát i případ, že by uživatel omylem zadal odpověď na první či druhý dotaz velkým písmenem.
+Toto není moc elegantní, ani nepokrývá všechny varianty:
+If den = "a" And horko = "a" Then
+    MsgBox ("jít si zaplavat")
+ElseIf den = "A" And horko = "A" Then
+    MsgBox ("jít si zaplavat")
+Zkuste použít složenou podmínku obsahující And i Or. Tedy zkuste výše uvedené dvě podmínky spojit do jedné.
+13) Počítač se zeptá:  "Chcete skončit?  (A/N)" Při stisku A program skončí,  při stisku čehokoliv jiného se vypíše  "A stejně skončím!" a program skončí.
+14) Zadejte a,b,c. Program vypočte kořeny kvadratické rovnice a*x^2 + b*x + c = 0. Pokud si už ze školy nepamatujete, tak hledejte na Wikipedii heslo Diskriminant. Pozn.: na videu 034.MTS od desáté minuty to doc. Homola vysvětluje. Tento program je těžší, můžete jej nechat na později.Teorie: Řešením jsou v závislosti na řešení diskriminantu D buď dvě různá čísla (při kladném D), nebo jeden dvojnásobný kořen (D = 0) nebo dvě komplexně sdružená čísla (při D<0).    D=b2-4ac. 
+x_(1,2)  = (-b±√(b^2 -4ac))/(2a)Tedy pro D=0 bude řešením zdvojený kořen -b/2aOtestujte na následujících vzorových datech:Dvě reálná řešení budou pro (x-1)(x-2)=X2-3x+2, tedy parametry budou 1, -3, 2Zdvojený kořen bude pro (x-2)(x-2)=X2-4x+4, tedy parametry budou 1, -4, 4A komplexně sdružený kořen bude pro x2+2x+3, tedy parametry 1, 2, 3, řešení pak bude  -1±i* √(2)Pokud někdo výše uvedenému nerozumí (ani s pomocí výše uvedeného videa), tak program přeskočte. V kurzu nehraje matematika hlavní roli. 
+
+Select Case
+15) Program se zeptá, jak je venku, nabídne vám: úmorné vedro, zima, déšť, mlha, tma, chumelenice, atd. Podle toho vám navrhne, co máte dělat, např. dobře se obléci, jít na plovárnu atd. Nepoužívejte příkaz IF.
+16) Uživatel zadá dvě čísla. Poté se objeví nabídka, zda chce sčítat, odčítat, násobit, dělit nebo končit. Poté se objeví výsledek vybrané operace se zadanými čísly nebo program skončí.
+17) Zadejte částku v Kč a pak si z nabídky vyberte měnu, na kterou chcete směnit (např. DEM, USD, FRF atd.). Počítač přepočítá částku na tuto měnu.
+18) Zadejte číslo měsíce (1 až 12). Program vypíše, kolik má měsíc dní (únor má zjednodušeně 28 dní). Proveďte pomocí if i case.
+
+c) Jednoduché cykly (FOR) + RND
+Aby bylo možno výsledek zkontrolovat, tak program musí mít jen jeden MsgBox, ve kterém budou všechna zadaná (či generovaná) čísla a poté výsledek. 
+1)  Vypište tabulku funkce sinus od 0 do 2*PI s krokem 0,1.
+2)  Program vygeneruje deset celých čísel (např. od -100 do 100). Zjistěte, kolik z nich je v určitém intervalu (např. od 10 do 50)
+3)  Vytvořte program, který táhne 5 čísel Sportky (čísla 1 až 49). Čísla se (na rozdíl od Sportky) mohou opakovat.
+4)  Vypište klesající posloupnost čísel od 8 do -8.  Varianta: vypište stejnou posloupnost, ale pouze každé druhé (sudé) číslo. (Nepoužívejte if.)
+5)  Vygenerujte 20 celých náhodných čísel v rozsahu 10..50. Zjistěte, o kolik se jejich střední hodnota (průměr) liší od středu intervalu, tedy od 30.
+6)  Totéž jako d1, ale předem se zadá počet tříd.
+7)  Nasimulujte minutu po minutě kurz koruny k euru prvních dvacet minut po opuštění kurzového závazku ČNB. Bude oscilovat mezi 26 (včetně) a 28 (ne včetně) Kč/Euro. V MsgBoxu je vypište (pomocí Mod)  tak, že budou vždy po pěti na řádku (oddělené tabulátorem). 
+7b) Pokud je příklad 7) moc těžký, tak zkuste nejprve jednodušší úkol: Ve smyčce for jdoucí od 1 do 20 vypisujte počitadlo (tedy postupně 1 až 20). Ale ne všechna čísla na jednom řádku nebo všechna čísla pod sebou, nýbrž takto:
+1 2 3 4 5
+6 7 8 9 10
+11 12 13 14 15 
+16 17 18 19 20
+8)  Zadej číslo a pak program vypíše součet čísel od jedné do udaného čísla
+9)  Zadejte celé číslo (do 100), program vypíše všechny jeho dělitele (použij operátor modulo)
+10) Vytvořte program pro zkoušení malé násobilky. Program zadává náhodně násobení čísel od 1 do 10, např. 5*6=, 8*4= atd. Uživatel napíše výsledek. Pokud to je špatně, napíše počítač správný výsledek. Celkem 10 příkladů, nakonec se zobrazí počet chyb.
+11) Tabulka ASCII: zobrazit v  msgBoxu v levém sloupci čísla např. 65 až 100 a v pravém příslušný znak.
+ 
+ Krokujte klávesou F8 příklad č. 5 z této sekce. Zobrazte si okno Locals Window (viz nabídka View) a sledujte, jak se postupně mění hodnoty proměnných. (Pozn. toto vám při zkoušce může velmi pomoct v řešení problémů.)
+Náročnější
+12) Sestavte program, který za vás zahraje poslední úder do golfového míčku. Stojíte 3 metry od jamky o průměru 10cm (tedy vzdálenost 2,95 až 3,05) a na ty 3 metry má vaše chvějící se ruka rozptyl ± 1m (tedy náhodná reálná čísla 2 až 4). Kolikrát ze 100 úderů se strefíte? A na kolikátý pokus jste se poprvé strefili? (program Doc. Homoly)
+Dvojitý cyklus for
+13) Vypište tabulku malé násobilky.Bude 10 sloupců (+záhlaví) a 10 řádků (+záhlaví). Tedy první sloupec a první řádek jsou záhlaví:     1   2   3   4     5    6   7   8   9  10      toto je záhlaví1   1   2   3   4     5    6   7   8   9  102   2   4   6   8   10 12 14 16 18 203   3   6   9  12  15 18 21 24 27 304   atd.
+14) Vytisknete na prvním řádku jednu hvězdu, na druhém dvě až do desátého.
+ Potom se začnou hvězdy ubírat.
+ Varianta: Totéž, ale na prvním řádku se vytisknou dvě hvězdy, na druhém
+ čtyři atd.
+ Varianta 2: Totéž, ale na prvnim i druhem řádku se vytiskne hvězda, na
+ třetím a čtvrtém dvě hvězdy atd.
+náročnější:
+15) Vygenerujte 100 náhodných celých čísel od 1 do 5. Zjistěte, zda jsou někdy dvě stejná vedle sebe, která to jsou a jaké je jejich pořadové číslo.
+16) Vypište 10 řádků. Na prvním řádku číslo 1, na druhém řádku 12, na třetím 123 atd. (použijte vnořenou smyčku)
+17) Počítač popíše 20 řádků náhodným počtem hvězdiček.(použijte vnořenou smyčku)
+18) Program vypíše všechna prvočísla do čísla 1000. Prvočísla jsou čísla dělitelná jen jedničkou a sama sebou. (použij modulo)
+
+d) Jednoduché cykly While
+Vytvořte ve variantě s podmínkou na začátku i na konci (v jazyku Basic to je: DO WHILE... LOOP i DO...LOOP WHILE), pokud je to možné, tak i FOR
+1) Zadejte postupně, kolik je v každé třídě žáků (0=konec). Program spočítá, kolik je žáků v celé škole a průměrný počet žáků ve třídě. Ověřte, že nula do platných dat nepatří. Nesmí se tedy stát, že při zadání 30 a 0 (tedy jen jedna třída a to s 30 žáky) vyjde průměrný počet žáků 15 (omylem se uvažovaly dvě třídy, jedna má 30 a druhá 0 žáků)
+2) Máte schované účtenky z různých nákupů, nevíte ale, kolik účtenek je. Proto částky na účtenkách budete zadávat postupně, jako poslední zadáte nulu. Program spočítá, kolik jste utratili a zároveň oznámí, kolik nákupů přesáhlo částku 100 Kč.
+3) Zadejte první, druhy a poslední člen lineární posloupnosti. Program vytiskne pod sebou všechny prvky posloupnosti. Varianta: Zadá se první a druhy krok a počet prvku posloupnosti.
+4) Varianta na b5): Program postupně čte nejprve jméno a pak výšku žáka. Prázdné jméno načítání ukončuje. Poté zobrazí jméno a výšku nejvyššího žáka.
+5) Zadejte řadu celých čísel ukončenou nulou (která do řady již nepatří). Program v MsgBoxu vypíše daná čísla, jejich počet, součet, průměr, minimum, maximum. Případně ještě vypíše ta z nich, která jsou sudá a jejich počet. Případně ještě vypíše ta z nich, která jsou větší, než první číslo.
+6) Program Doc. Homoly: Sestavte program, který si myslí (náhodně vygeneruje) celé číslo z intervalu <1,10>. Pak ho vy hádáte (zadáváte z klávesnice), dokud se nestrefíte.
+7) Program hází kostkou tak dlouho, dokud nepadne šestka. Potom vypíše, kolik hodů bylo potřeba.
+
+  Vyzkoušejte všechny příklady c) s použitím  WHILE.
+
+8)  Varianta příkladu ze skupiny b: Uživatel opakovaně zadá znak, program vždy odpoví, zda se jedná o písmeno, číslici nebo jiný znak. Zadávání končí zadáním např. nuly. Řešte pomocí else if.
+9) Uživatel bude zadávat postupně teploty s přesností na desetinu stupně. Zadávání ukončí zadáním teploty přesahující 100°. Program zobrazí zadané teploty, maximální teplotu a kolikátá v pořadí tato teplota byla.
+Pozor: program je nutné umět velmi rychle převést z varianty s podmínkou na konci na podmínku na začátku a naopak.
+e) Cykly a pole
+Programy budou vždy obsahovat dvě smyčky (cykly). V první se pole naplní, v druhé zpracuje.
+Také tyto programy si pokud možno vyzkoušejte ve variantách For, While s podmínkou na začátku a na konci
+1) Zadejte řadu čísel ukončenou nulou. Zjistěte nejmenší a vypište, kolikrát se v řadě opakuje.
+2) Zadejte řadu čísel ukončenou nulou. Potom zadáte některé z předtím zadaných čísel. Program vypíše, kolikrát toto číslo předtím padlo.
+3) Vygenerujte několik hodů kostkou. Program vypíše, kolikrát padla jednotlivá čísla a vyjádří procentuálně. Jaký byl průměr?
+4) Upravte program pro Sportku (c3) tak, aby se tažená čísla nemohla opakovat.
+Předělejte příklady c) a d) na pole. Tedy nezpracovávejte je v první smyčce, ale až v druhé.
+5) Zadejte v jednom cyklu řadu čísel. V dalších cyklech program poté spočítá jejich součet, průměr, maximum, minimum, počet nenulových hodnot. Pro každou matematickou operaci vytvořte zvláštní smyčku. Vypište hodnoty pod sebe. (Varianta: vytvořte ještě součet druhých mocnin.)
+6) Zadejte postupně několik písmen. Program potom náhodně vygeneruje slovo (shluk písmen), které se bude skládat z těchto písmen (např. vždy 5 znaků). Písmena se mohou opakovat a nemusí být použita všechna. Pozn. zadávání můžete ukončit třeba číslem 0 nebo třeba stiskem klávesy enter. (Varianta: vygenerujte třeba 10 slov.)
+7) Zadejte postupně do pole několik různých slov. Každé slovo přitom budete zadávat zvlášť. Poté znovu zadejte jedno z těchto slov. Program vypíše číslo pořadí, v jakém bylo toto slovo zadáno (na jaké pozici se vyskytuje v poli).
+8) Řadu slov z předchozího příkladu vypište v obráceném pořadí, a pak vypíše pouze sudá a pak pouze lichá slova.
+Náročnější
+9) Sestavte program, který se nejprve zeptá na počet hodů kostkou. Pak tolikrát "hodí kostkou" a zobrazí, kolikrát padla jednotlivá čísla celkem a percentuelně. (omylem stejné jako e3, tedy nevypracovávat)
+10) Program Doc. Homoly: Dvojrozměrné pole: Naplňte zadáním po řádcích pole 4x4. Potom zjistěte minimum a zobrazte řádkové a sloupcové indexy buněk, na kterých se minimum nachází.
+11) Program Doc. Homoly: Dvojrozměrné pole: Naplňte zadáním pole 4x4. Poté ji zobrazí překlopenou kolem hlavní diagonály (tedy prohodí indexy řádků a sloupců). Takže například místo pole:
+ 1  2  3  4 
+ 5  6  7  8 
+ 9 10 11 12
+13 14 15 16 
+bude pole:
+1  5  9  13
+2  6  10 14
+3  7  11 15
+4  8  12 16
+12) Program zjistí indexy všech lokálních maxim (tedy prvků pole, které sousedí s nižšími hodnotami, čili které mají vlevo i vpravo nižší hodnotu). Např. mějme pole:1 2 3 1 5 6 7 4 3 2 6 5Lokální maxima jsou 3, 7, 6
+13) Je dána posloupnost celých čísel (ne lineární, tedy čísla budou nějak na přeskáčku). Zjistěte, zda se v dané posloupnosti nějaké číslo opakuje. 13 b) zjistěte, která čísla se opakují. 13c) přidejte ještě informaci, kolikrát se opakují.
+14) Vygenerujte deset celých čísel a setřiďte je.  Použijte např. algoritmus Bublinkového třídění (Bubble sort)
+15) Uživatel zadá několik slov (bez diakritiky). Program zapíše tento text v Morseově abecedě. Oddělovačem znaků bude lomítko. zadat všechna slova do jednoho inputboxu, oddělená normálně mezerami. A mezera se překládá taky jako lomítko. Tedy na hranicích slov budou vlastně dvě lomítka.- (Nutná znalost Morseovy abecedy). 
+15b) Zdokonalení programu: text bude v souboru, Morseovka se zapíše do jiného souboru. Další program bude naopak načíst Morseovku a převádět na běžný text. (Práce se soubory - pokročilejší látka, bere se až v prezenčním kurzu.Tedy v přípravném kurzu nevypracovávat.)
+16) Simulace karetní hry Vojna pro dva hráče a 32 karet (čtyři barvy s hodnotami 7 až 14, tedy 7,8,9,10, spodek, svršek, král, eso). Na začátku oba hráči dostanou náhodně šestnáct karet. Na monitoru se zobrazí šestnáct vyložení obou hráčů s informací, kdo dané vyložení vyhrál. Na konci vyhrává ten, který vyhrál nejvíce vyložení. V jednodušší variantě se neřeší vyložení stejných hodnot. V dokonalejší variantě se vykládá ještě jednou, vítěz si pak připíše dvě vítězství. (Dost náročný, řešit až jako poslední program tohoto souboru.)
+
+f1) Podprogramy bez pole
+ Předělejte co nejvíce z předchozích programů a) až d) tak, aby používaly podprogram. Proměnné se předávají přes parametry podprogramu, v hlavním programu použijte jiné názvy proměnných než v podprogramu. V podprogramu by neměly být vstupy a výstupy (tedy InputBox nebo MsgBox). Například program A1: v hlavním programu se z klávesnice načte počet dnů a hodin. V místě, kde byl předtím výpočet, bude nyní volání funkce. Předá se jí v závorce dva parametry (počet dnů a hodin). Funkce vrátí do hlavního programu celkový počet hodin, což se poté v hlavním programu vypíše.
+1) Napište funkci, která převádí stupně a  minuty na radiány. Proměnné se předávají přes parametry  podprogramu, v hlavním programu použijte jiné názvy proměnných než  v podprogramu. Návod: řešte trojčlenkou. Plnému kruhu odpovídá 360 stupňů nebo 2 pí radiánů (přibližně 6,28 radiánů).
+2)  Napište funkci, které se zadá znak a která vrátí jeho ASCII hodnotu.
+3)  Napište šifrovací funkci, které se předá znak a která vrátí následující znak v anglické abecedě. Tedy znak, jehož pozice v ASCII tabulce je o jedno vyšší (pro „z“ vrátí „a“). Poté program zdokonalte tak, aby se funkci předalo i číslo n a funkce pak v ASCII tabulce posouvá o n.
+4) Napište funkci (a pak předělejte na subrutinu), které se předá rok (čtyřciferný) a která vrací logickou hodnotu "True", pokud je rok přestupný (přepracujte z Juliánského kalendáře z BasicCv.doc na Gregoriánský).  Řešte dvěma způsoby: dvěma podmínkami (či if-else) i jednou složenou podmínkou.Potřebná teorie: Podle gregoriánského kalendáře jsou přestupné roky ty, které jsou dělitelné čtyřmi. Ale roky dělitelné stem jsou přestupné jenom tehdy, jsou-li dělitelné také 400. Přestupnými roky jsou proto například roky 1600, 2000, 2400 apod., zatímco roky 1700, 1800, 1900, 2100 atd. přestupné nejsou. (zdroj: wikipedia)
+5) Sestavte funkci Kurs, která má dva parametry: prvním je číslo ve významu korun, druhým je tříznakový řetězec ve významu kódu měny („EUR“, „USD“, „GBP“), na kterou se tyto koruny mají vyměnit. Výsledkem volání funkce je částka v dané měně, rovnající se danému počtu korun (nebo hodnota -1, jestliže jde o měnu, pro kterou není kurs znám). (program Doc. Homoly)
+6) Funkce, které se předá číslo 1 až 7 a vrací slovně den v týdnu
+7) Obdoba funkce signum: metodě se zadá znak a metoda vypíše (nebo vrací) slovy: písmeno (pozná malé i velké), číslice, ostatní.
+
+Náročnější
+Doporučuji do C# i Javy předělat i předchozí programy sekce f1.
+8) Sestavte funkci PocetDniMesice, která má jako jediný parametr číslo měsíce. Výsledkem volání funkce je počet dní tohoto měsíce (nebo -1, není-li hodnota měsíce správná). Přestupné roky pro únor neuvažujte. Funkci ověřte na zadání: sestavte program, který načte číslo měsíce a poté zobrazí, kolik dní má tento měsíc. Vyzkoušejte i pro měsíc = 13. Návod: řešte pomocí složené podmínky nebo konstrukcí Select Case. (program Doc. Homoly)
+Pozor: Vstupy a výstupy budou v hlavním programu, předávat se budou přes parametry funkce či subrutiny. V hlavním programu musí být použity jiné názvy proměnných než v subrutině či funkci.
+
+Složité programy Doc. Homoly:
+ 9) Sestavte funkci ObratText s jedním parametrem - textovým řetězcem. Výsledkem volání funkce je tentýž textový řetězec, ale má znaky v obráceném pořadí. Funkci ověřte na zadání: sestavte program, který načte textový řetězec a zobrazí ho v obráceném pořadí znaků. 
+10) Sestavte funkci BezMezer s jedním parametrem - textovým řetězcem. Výsledkem volání funkce je tentýž textový řetězec, ve kterém však jsou vypuštěny všechny mezery. Funkci ověřte na zadání: sestavte program, který načte textový řetězec a zobrazí ho tak, že v něm jsou vypuštěny všechny mezery. 
+11) Sestavte funkci Vyskyty se dvěma parametry - textovými řetězci. Druhý parametr je subřetězec, případně jen jednoznakový řetězec. Výsledkem volání funkce je počet opakování druhého parametru v parametru prvním. Funkci ověřte na zadání: sestavte program, který načte textový řetězec a zobrazí například počet písmen "A" v tomto řetězci.
+12) Sestavte funkci CisloDneVRoce, která má tři parametry: prvním je číslo dne, druhým číslo měsíce, třetím číslo roku včetně století. Výsledkem volání funkce je pořadové číslo zadaného dne v daném roce (nebo -1, jestliže takové datum neexistuje). Uvažujte i přestupné roky. Funkci ověřte na zadání: sestavte program, který postupně načte den, měsíc a rok, a poté zobrazí, kolikátý den v roce to je. Vyzkoušejte i pro den = 32 nebo pro měsíc = 13. Dále vyzkoušejte pro [31/12/1900] a pro [31/12/2000]. 
+V programu využijete datový typ Date a funkce Weekday, WeekdayName a CDatePozor, Excel považuje chybně rok 1900 za přestupný. Tento program je dost náročný, můžete si jej nechat na konec
+13) Zjistěte, proč ve Visual Studiu dává tento program i u subrutiny správný součet:
+Sub main()
+    Dim soucet As Byte
+    soucet = sectiF(3, 4)
+    ret = ret + Chr(10) + "Soucet podle funkce je " + Str(soucet)
+    sectiS(3, 4, soucet)
+    ret = ret + Chr(10) + "Soucet  podle subrutiny je " + Str(soucet)
+    MsgBox (ret)
+End Sub
+
+Function sectiF(a As Byte, b As Byte) As Byte
+    sectiF = a + b
+End Function
+
+Sub sectiS(a As Byte, b As Byte, vys As Byte)
+    vys = a + b + 5
+End Sub
+
+f2 Podprogramy s polem
+!!!!!! Pozor: všechny příklady týkající se funkcí (sekce f1 i f2) je nutné umět velmi rychle převést na použití subrutiny. 
+Při použití subrutiny se řiďte postupem v kapitole Parametry volané odkazem a hodnotou. Tedy měli byste rozumět, kdy před parametrem použít ByRef a kdy ByVal. A i pro subrutinu platí totéž co pro funkci: měli byste výpočet nějakým způsobem dostat do hlavního programu a až tam vypsat. Tedy NEPOUŽÍVAT v subrutině MsgBox.
+ Předělejte co nejvíce z předchozích programů e) tak, aby používaly funkci. 
+
+1) Zadejte ve smyčce do pole úspory několika osob. Poté se program zeptá, jaká je roční úroková míra. Pole předejte funkci, která vrátí pole po započítání úroků. Původní pole nesmí být voláním funkce ovlivněno (to platí i pro všechny další příklady).
+2) Stroj na losování Sazky se porouchal. Tahal sice z osudí čísla 1 až 49, ale některá opakovaně. Vytvořte funkci, které se předá pole takovýchto čísel, funkce pole vrátí očištěné od druhých a dalších výskytů opakujících se čísel (pro jednoduchost stačí, aby na jejich místě dosadila nulu). Nevadí, že tedy může být ve výsledku méně čísel než požadovaných pět.
+3) Cvičení na subrutinu: Napište subrutinu, která vytiskne řádek obsahující N znaků Z. Údaje N a Z jsou vstupními parametry subrutiny. Pozn.: toto nelze provést jako funkci! Pozn.: použití MsgBox v subrutině či funkci je výjimečné, nepoužívejte tento postup v jiných programech.
+
+Programy Doc. Homoly:
+4) Sestavte funkci PocetVyskytu, která má dva parametry: Prvním je jednorozměrné pole čísel A, druhým je číslo C. Výsledkem funkce je celé číslo udávající, kolikrát se číslo C vyskytuje v poli A. Funkci ověřte na zadání: sestavte program, který postupně načte pole A a hodnotu C, a poté zobrazí počet výskytů hodnoty C v poli A. 
+5) Sestavte funkci PocetPadlych, která kromě předaného pole má i parametr, kolikrát se kostkou hodilo. Výsledkem funkce je jednorozměrné celočíselné pole udávající, kolikrát padla ta která hodnota na kostce. Funkci ověřte na zadání: sestavte program, který se zeptá na počet hodů, vygeneruje pole a pak zobrazí, kolikrát každé číslo padlo. Povšimněte si, že čím více hodů, tím více se počty vyrovnají   (podobné e9, ale zde je to s použitím funkce)
+6) Sestavte funkci SudaCislaZpole, která má jediný parametr: pole celých čísel. Výsledkem funkce je jednorozměrné celočíselné pole, ve kterém jsou jen sudá čísla obsažená v poli parametru. Funkci ověřte na zadání: sestavte program, který načte pole celých čísel ukončených nulou, která už k číslům nepatří, a pak zobrazí všechna ze zadaných čísel, která jsou sudá. 
+7) Sestavte program, který nejprve čte řadu čísel ukončených nulou, která už do řady nepatří. Pole se předá funkci, která sdělí (boolean), zda jsou čísla seřazena vzestupně. Tedy každé další číslo je větší než předchozí. Čili stačí jeden jediný pokles a už to není pravda.
+8) Sestavte program, který nejprve čte řadu čísel ukončených nulou, která už do řady nepatří. Pole se předá funkci, která sdělí, kolikátý prvek v řadě porušuje vzestupné řazení čísel. Pokud je pole celé vzestupné, pak vrátí -1
+9) Sestavte program, který nejprve čte řadu čísel ukončených nulou, která už do řady nepatří. Pole se předá funkci, která sdělí (boolean), zda čísla tvoří lineární aritmetickou (tj. lineární) posloupnost (rozdíl dvou sousedních je vždy tentýž). 
+10) Obtížné, třídění: Sestavte funkci SerazenePole, která má jediný parametr: pole celých čísel. Výsledkem funkce je jednorozměrné celočíselné pole, ve kterém jsou stejná čísla jako v poli parametru, ale jsou seřazena vzestupně. Funkci ověřte na zadání: sestavte program, který načte pole celých čísel ukončených nulou, která už k číslům nepatří, a pak zobrazí všechna zadaná čísla ve vzestupném pořadí. (obdoba E14, ale třídění proběhne ve funkci)
+11) Obdoba f1-3 ale pro pole znaků. Tedy funkce má na vstupu pole znaků, které vrátí zašifrované
+12) ještě zbývá procvičit funkci, která má na vstupu pole stringů. Takže naprogramujte variantu na f2-11, ale funkci se bude předávat několik stringů (tedy několik slov). Funkce slova vrátí zašifrovaná.
+
+g) Řetězce a soubory
+Tyto příklady cvičte až v prezenčním kurzu, u vstupního testu se nezkouší
+1) Přečtěte ze souboru slovo a do druhého souboru je vypište pozpátku.
+2) Zašifrujte zprávu tak, že vytisknete všechny znaky o n vyšší podle ASCII.
+3) Přesměrujte výpis adresáře do souboru (příkaz MS-DOS). Pomocí programu pak tento soubor zpracujte: prohoďte oddělovače tisíců ve sloupci délky souborů. Místo tečky budou čárky nebo naopak.
+4) Uživatel zadá do jedné řetězcové proměnné jméno a příjmení (oddělené mezerou). Program vypíše nejprve příjmení a potom jméno.
+5) Máme textový soubor ve formátu prostý text bez formátování, slova jsou oddělena mezerou, tabulátorem nebo odřádkováním. Program zobrazí počet řádků a počet slov v souboru.
+6) Program zjistí, zda se v adresáři nacházejí dva soubory se stejnou délkou (tedy dva pravděpodobně stejné soubory, lišící se názvem)
+7) Uživatel zadá trojmístné číslo, program vypíše číslo zapsané pozpátku.
+8) Zadejte počet jmen a pak tato jména zadejte. Program vypíše jména podle abecedy
+9) Napište řetězec, program vypíše všechna velká písmena, které řetězec obsahuje
+10) Obtížné: Uživatel zadá matematický výraz, např. 1+5*8. Program výraz vypočítá, přitom bere do úvahy prioritu operátorů. 
+11) Příklady na FSO. Například: vypiš největší a nejmenší soubor v daném adresáři. Vypiš průměrnou velikost souborů v adresáři atd.
+
+následující programy jsou od Doc. Homoly:
+12)	Sestavte program, který vytvoří textový soubor X.Y s tabulkou hodnot [n, n2, n3] pro n od 1 do 30. Tabulka bude vhodně formátovaná, sloupce budou mít nadpisy [N, Druhá mocnina, Třetí mocnina]. 
+13)	Sestavte program, který vytvoří textový soubor X.Y s malou násobilkou - maticí [10 x 10], na i-tém řádku v j-tém sloupci je hodnota [i x j]. 
+14)	Sestavte program, který vytvoří textový soubor X.Y se třiceti řádky takový: na prvním, druhém a třetím řádku jedna hvězdička, na čtvrtém, pátém a šestém řádku dvě hvězdičky atd. 
+15)	Vytvořte mimo Basic textový soubor A.B; pak sestavte program, který vytvoří soubor X.Y - ten bude zašifrovaným souborem A.B (každý znak z A. bude mít v X.Y kódovou hodnotu např. o 3 vyšší). 
+16)	Funkci Vyskyty z předchozího odstavce (F1 10) použijte při sestavení programu řešícího následující úlohu: Zjistěte, kolik vět obsahuje textový soubor X.Y - věta je přitom posloupnost znaků ukončených tečkou. Funkci nelze zcela využít, protože jejím druhým parametrem je jen jeden znak. Funkce vrátí, kolikrát se vyskytuje v souboru tečka, ale už neověří, zda před tečkou jsou nebo nejsou tečky.
+h) Vlastní typy a objekty
+Tyto příklady se cvičí až v kurzu, u vstupního testu se nezkouší
+Zjednodušené programy Doc. Homoly:
+1.	Sestavte program, který obsahuje deklaraci vlastního typu PLATIDLA; jeho datovými poli jsou (celá čísla) KC1, KC2, KC5, KC10, KC20, KC50 ve smyslu počtu korunových až padesátikorunových mincí. V programu dále vytvořte funkci Vycetka s jedním parametrem - celým číslem ve smyslu jakékoliv částky v Kč (max 99 Kč). Výsledkem volání funkce je hodnota typu PLATIDLA obsahující výčetky platidel, tj. minimální počty mincí nutných k výplatě částky uvedené jako parametr. Funkci ověřte v hlavním programu, který nejprve načte hodnotu Kč a pak zobrazí výčetku platidel. 
+2.	Sestavte program, který obsahuje deklaraci vlastního typu DATUM; jeho datovými poli jsou celá čísla ve smyslu čísla dne, čísla měsíce a čísla roku (včetně století). V programu dále vytvořte funkci StejnaData se dvěma parametry, oba typu DATUM. Výsledkem volání funkce je logická (boolean) hodnota Ano, jsou-li obě data zadaná jako parametr shodná, nebo Ne, jestliže se liší. Funkci ověřte v hlavním programu, který nejprve postupně načte dvě trojice čísel ve smyslu dvou datumů, a poté zobrazí informaci o shodě nebo neshodě datumů.
+3.	Sestavte program, který obsahuje deklaraci vlastního typu DATUM; jeho datovými poli jsou celá čísla ve smyslu čísla dne, čísla měsíce a čísla roku (včetně století). V programu dále vytvořte funkci CisloDne s jedním parametrem typu DATUM. Výsledkem volání funkce je celé číslo ve smyslu pořadového čísla dne v daném roce (nebo -1, pokud takové datum neexistuje). Funkci ověřte v hlavním programu, který nejprve postupně načte tři čísla [den, měsíc, rok] a pak zobrazí pořadové číslo dne v roce. (Zjednodušená obdoba F1 11.)
+4.	Sestavte program, který obsahuje deklaraci vlastního typu DATUM; jeho datovými poli jsou celá čísla ve smyslu čísla dne, čísla měsíce a čísla roku (včetně století). V programu dále vytvořte funkci Zitra s jedním parametrem typu DATUM. Výsledkem volání funkce je hodnota typu DATUM s datem následujícím po datu přítomném v parametru (nebo datum [0,0,0], jestliže takové datum neexistuje). V případě potíží neuvažujte přestupné roky (tedy únor bude mít 28 dní). Funkci ověřte v hlavním programu, který nejprve postupně načte tři čísla [den, měsíc, rok] a pak zobrazí datum následujícího dne. Pro jednoduchost nemusíte (ale můžete) řešit poslední den roku. 
+
+
+
+
+
+
+
+
+i)	Vlastní formuláře
+Tyto příklady se cvičí až v kurzu, u vstupního testu se nezkouší
+Nutné pracovat v prostředí Visual Studia. Domácí cvičení před zkouškou z formulářů ve VB v kurzu.
+DÚ1)
+
+Pokyny k formuláři (vypracovává se ve Visual Studiu):
+	Nejedná se o formulářovou aplikaci, ale o konzolovou aplikaci, která zobrazí formulář s prvky až po zadání názvu formuláře do InputBoxu. Do té doby je formulář skryt.
+	Combo box musí reagovat na výběr z nabízených možností
+	Combo box musí umožňovat také ruční zadání (zapsaní položky z klávesnice)
+	Tlačítko s textem ESC: nevypracovávat (bod zrušen)
+	Na kterékoliv tlačítko umístěte místo textu obrázek 
+	Na kterémkoliv tlačítku se objeví po najetí myši žlutý obdélník s vysvětlujícím textem (bublinková nápověda)
+	Trackbar umožňuje zadat hodnoty 1-100, ale čáreček (ticks) bude jen 10.
+	Po zvolení Help se zobrazí krátký MsgBox s textem „Toto je nápověda…“
+	Dialogové okno Otevřít se objeví příslušnou volbou z roletkového Soubor a umožní volit mezi zobrazením všech souborů nebo jen souborů *.DOC (tato je předvolena – default)
+	Pomocí dialogového okna Otevřít načtěte do multiline textBoxu obsah nějakého souboru s příponou .TXT
+	V roletkové nabídce Soubor bude také volba Uložit, která umožní uložit obsah mulitline textBoxu do nějakého souboru.
+	Pod comboboxem se objeví text podle aktuální volby všech prvků. Např. „12 delší vyšší plast, barva hnědá“. Tento text se bude aktualizovat při změněné jakéhokoliv prvku (ComboBoxu, radioButtonu, checkboxu, NumericUpDown)
+	Ihned po spuštění formuláře začně běžet progresbar a poběží 10 vteřin. Stiskem tlačítka s šipkou začne progresbar počítat od začátku. Po zaplnění se progressbar zastaví.
+	Do sčítacích textboxů nebude možné zadat písmena a-Z (znaménko mínus ano). 
+	Ve statusstripu se zobrazí aktuální čas a bude se pravidelně aktualizovat (i po zastavení progressbaru).
+	Ve statusstripu se zobrazí cesta k souboru, který byl vybrán dialogovým oknem Otevřít.
+
+Poznámka: podobný formulář je potom i na zkoušce. Kdo tuto zkoušku nesloží, bude pak tento formulář dělat u zkoušky v jazyku C#.
+Nepovinné: Do nabídky Soubor umístěte položku Nastavení, která zobrazí další formulář. V něm bude možné
+	změnit barvu pozadí úvodního formuláře
+	změnit barvu progressBaru
+	přidat další barvy do kolekce comboBoxu
+
+DÚ2
+Vytvoříte si nový projekt, který bude jako konzolová aplikace. Tedy nejdřív se spustí kód, který se zobrazí inputbox, kam zadáte číslo. To číslo bude počet vteřin po jakou dobu poběží progressbar.
+Pokud výsledkem inputboxu bude číslo 0 nebo nečíselný údaj, tak program skončí a objeví se MsgBox s chybovou hláškou: Error a program se ukončí.
+V opačném případě se objeví tento formulář:
+
+Hned po zapnutí poběží dole ProgressBar po zadaný počet vteřin.
+Po zvolení Soubor – Nový ProgressBar pojede od začátku.
+Soubor – Konec zavře formulář, stejně tak jako křížek vpravo nahoře 
+Soubor – Otevřít načte text do textového pole z nějakého souboru (nebude nám záležet, zda se dobře nebo špatně zobrazuje diakritika tohoto textového souboru).
+Z ComboBoxu budeš moct vybrat druh ovoce (napiš alespoň 5 druhů). Uživatel má mít možno zadat i nějaký další. Vybraný druh se objeví v textu dole. Jeho množství se nastaví TrackBarem (max. 20).
+Do políček níže budeš moct zadat čísla nebo je zvýšit i šipečkami a vpravo v labelu se objeví násobení.
+RadioButtony umožní vybrat vždy jen jednu ze 3 variant. Jinak to nic dělat nebude. (Těžší varianta: budou ukazovat jakost ovoce, objeví se tedy v textu vždy např. „Jahody 10 kg, jakost A“)
+Dvě tlačítka budou sloužit pro zobrazení nebo skrytí obrázku.
+Dole ve StatusStripu se bude ukazovat aktuální čas a počet zatrhnutých CheckBoxů.
+Nabídka Nápověda zobrazí MsgBox, kde bude text: „Toto je nápověda k tomuto programu“
+Další náměty (nezasílá se ke kontrole)
+1)	Vytvořte kalkulačku, která se bude co nejvíc podobat standardní kalkulačce Windows (včetně jejich funkcí).
+2)	Vytvořte formulář, který bude obsahovat PictureBox. Po kliknutí na něj se objeví okno pro výběr adresáře. Po zvolení adresáře s obrázky se budou v PictureBoxu automaticky ve vteřinovém intervalu střídat obrázky.
+3)	Konfigurátor procesoru
+radiobutton procesor Intel nebo AMD
+pod tím každým radiobuttonem bude rozevírací nabídka s detailním výběrem procesoru. Např. AMD Athlon nebo Phenom, Intel: pro patici 775, 1156, 1366
+TextField: počet jader
+checkBoxy: zatrhnout, které všechny e-shopy se mají prohledávat (např. www.alfacomp.cz atd.)
+Zbytek stejné s předchozím.
+
+4)	Průvodce vyhledávání  mobilů (autor: někdo z katedry informatiky)
+(pravda, některé body jsou už trochu zastaralé…)
+radiobutton např. mobily do 3000 Kč, do 5000 a více. orámováno
+Checkboxy např.: mobily s fotoaparátem, chytré mobily, mobily s MP3, mobily s konektorem jack pro sluchátka, výsuvné mobily, véčka. 
+Potom tlačítko Další>>. 
+Na další stránce budou rozbalovací nabídky: 
+Značka (Nerozhoduje, LG, Nokia, Sony Erickson, Samsung, HTC)
+Nabízí operátor (Nerozhoduje, O2...)
+rok uvedení na trh
+Hmotnost telefonu (do 100 g, do 120 g...)
+checkboxy: GPRS, Wi-Fi, Bluetooth, fotoaparát, slot pro microSD kartu
+Kromě tlačítka Hledat zde bude také tlačítko Zpět<<
+V hlavním okně bude také nabídka Soubor pro uložení a načtení výběru. A nabídka Nastavení, která zobrazí okno s dvěma kartami. Na kartě Nastavení budou vlevo sloupec se třemi radiobuttony v rámečku: výběr jazyka:česky, deutsch, English.  V druhém sloupci budou v rámečku dva checkboxy: Prohledávat. kamenné obchody, internetové obchody. A dole tlačítko OK (vrací do hlavního okna).
+Na kartě Velikost písma tři radiobuttony vedle sebe: 10 pt, 12 pt. a 14 pt. Dole opět tlačítko OK
