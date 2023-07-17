@@ -8,6 +8,7 @@ public class Delitelnost {
     int a = sc.nextInt();
     System.out.println("Zadejte druhé číslo: ");
     int b = sc.nextInt();
+    sc.close();
     if(a%b==0){
         System.out.println("Jsou dělitelná.");
     }else{
