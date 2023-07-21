@@ -7,7 +7,7 @@ public class StatniUtvar {
 
         System.out.print("Zadejte letopočet (od roku 1600): ");
         int rok = scanner.nextInt();
-
+        scanner.close();
         String statniUtvar = zjistiStatniUtvar(rok);
 
         System.out.println("V roce " + rok + " jsme se nacházeli ve státním útvaru: " + statniUtvar);
