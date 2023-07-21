@@ -23,7 +23,7 @@ a) Nejjednodušší úlohy (bez větvení)
 6) Zadejte poloměr kruhu. Vypočítejte obvod (o=2pr) a plochu (P=pr2).
 7) Zadejte počet sudů a množství litrů v sudu (ve všech je stejně). Kolik litrů je celkem?
 8) Zadejte číslo, počítač vypíše: Druhá mocnina čísla…  je...
-9) Z  klávesnice se  zadá očekávaný a  skutečný zisk. Počítač oznámí, kolika procent bylo dosaženo.
+9) Z klávesnice se  zadá očekávaný a  skutečný zisk. Počítač oznámí, kolika procent bylo dosaženo.
 10) Převeďte úhel zadaný v radiánech na stupně.
 Náročnější
 11) Sestavte program, který se zeptá na délku běžecké trati v metrech a poté na čas běžce na této trati ve vteřinách. Poté zobrazí, jakou průměrnou rychlostí v [km/hod] běžec běžel. (program Doc. Homoly)¨
